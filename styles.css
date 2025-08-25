@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main GameBoy container */
+.gameboy {
+  width: 380px;
+  height: 600px;
+  background-color: #8bac0f;
+  border-radius: 10px 10px 60px 10px;
+  padding: 20px;
+  box-shadow: 0 0 0 2px #0f380f, 5px 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Screen area */
+.screen-area {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen-border {
+  width: 320px;
+  height: 230px;
+  background-color: #9bbc0f;
+  border-radius: 10px;
+  border: 2px solid #0f380f;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: #0f380f;
+  border-radius: 3px;
+  padding: 10px;
+  color: #9bbc0f;
+  font-size: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.game-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.player-choice,
+.computer-choice {
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: #9bbc0f;
+  color: #0f380f;
+  border: 2px solid #306230;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vs {
+  font-size: 12px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score span {
+  margin: 2px 0;
+  font-size: 8px;
+}
+
+.message {
+  margin-top: 5px;
+  font-size: 7px;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 25px;
+  font-family: "Press Start 2P", cursive;
+  color: #306230;
+  font-size: 12px;
+  letter-spacing: -1px;
+  transform: rotate(-10deg);
+  align-self: flex-end;
+  margin-right: 30px;
+}
+
+/* Controls area */
+.controls-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* D-pad */
+.dpad-container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.dpad {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.dpad-button {
+  width: 30px;
+  height: 30px;
+  background-color: #0f380f;
+  position: absolute;
+}
+
+.dpad-center {
+  width: 30px;
+  height: 30px;
+  background-color: #0f380f;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+.dpad-up {
+  top: 0;
+  left: 35px;
+  border-radius: 5px 5px 0 0;
+}
+
+.dpad-right {
+  top: 35px;
+  left: 70px;
+  border-radius: 0 5px 5px 0;
+}
+
+.dpad-down {
+  top: 70px;
+  left: 35px;
+  border-radius: 0 0 5px 5px;
+}
+
+.dpad-left {
+  top: 35px;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 30px; /* Add margin to shift buttons to the right */
+}
+
+.action-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #cf0000;
+  color: white;
+  border: none;
+  font-size: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #8b0000;
+  transform: translateY(-2px);
+  transition: all 0.1s;
+  font-family: "Press Start 2P", cursive;
+}
+
+.action-button:active {
+  box-shadow: 0 2px 0 #8b0000;
+  transform: translateY(1px);
+}
+
+.action-button:nth-child(2) {
+  background-color: #0000cf;
+  box-shadow: 0 5px 0 #00008b;
+}
+
+.action-button:nth-child(2):active {
+  box-shadow: 0 2px 0 #00008b;
+}
+
+.action-button:nth-child(3) {
+  background-color: #00cf00;
+  box-shadow: 0 5px 0 #008b00;
+}
+
+.action-button:nth-child(3):active {
+  box-shadow: 0 2px 0 #008b00;
+}
+
+/* System buttons */
+.system-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.system-button {
+  padding: 5px 15px;
+  background-color: #0f380f;
+  color: #8bac0f;
+  border: none;
+  border-radius: 15px;
+  font-size: 8px;
+  transform: rotate(-25deg);
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  .gameboy {
+    width: 320px;
+    height: 520px;
+    padding: 15px;
+  }
+
+  .screen-border {
+    width: 280px;
+    height: 200px;
+  }
+
+  .action-button {
+    width: 50px;
+    height: 50px;
+  }
+}

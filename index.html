@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Rock-Paper-Scissors</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  </head>
+  <body>
+    <div class="gameboy">
+      <!-- Game screen -->
+      <div class="screen-area">
+        <div class="screen-border">
+          <div class="screen">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div class="game-display">
+              <div class="player-choice">?</div>
+              <div class="vs">VS</div>
+              <div class="computer-choice">?</div>
+            </div>
+            <div class="scoreboard">
+              <div class="score">
+                <span>YOU</span>
+                <span id="player-score">0</span>
+              </div>
+              <div class="score">
+                <span>CPU</span>
+                <span id="computer-score">0</span>
+              </div>
+            </div>
+            <div
+              class="message"
+              id="result-message"
+            >
+              Choose your move!
+            </div>
+          </div>
+        </div>
+        <div class="logo">Rock Paper Scissors</div>
+      </div>
+
+      <!-- Controls area -->
+      <div class="controls-area">
+        <!-- D-pad -->
+        <div class="dpad-container">
+          <div class="dpad">
+            <div class="dpad-button dpad-up"></div>
+            <div class="dpad-button dpad-right"></div>
+            <div class="dpad-button dpad-down"></div>
+            <div class="dpad-button dpad-left"></div>
+            <div class="dpad-center"></div>
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="action-buttons">
+          <button
+            class="action-button"
+            id="rock"
+          >
+            ROCK
+          </button>
+          <button
+            class="action-button"
+            id="paper"
+          >
+            PAPER
+          </button>
+          <button
+            class="action-button"
+            id="scissors"
+          >
+            SCISSORS
+          </button>
+        </div>
+
+        <!-- Start/Select buttons -->
+        <div class="system-buttons">
+          <button
+            class="system-button"
+            id="reset"
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
