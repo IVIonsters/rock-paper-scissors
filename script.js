@@ -15,3 +15,13 @@ paper.addEventListener("click", function () {
 scissors.addEventListener("click", function () {
   console.log("scissors selected");
 });
+
+// write function to get computer choice
+
+// write function to get human choice
+
+// create player variable score function
+
+// write logic to play a single round
+
+// write logic to play 5 rounds = 1 game
