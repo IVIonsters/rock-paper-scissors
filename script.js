@@ -47,10 +47,16 @@ function getComputerChoice() {
 
 // write logic to play a single round
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection === "rock") {
-    console.log("winner winner");
+  if (playerSelection === computerSelection) {
+    console.log("It's a tie mate, try again!");
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
+    console.log("Sorry Mate you lose this one!");
+  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    console.log("Sorry Mate you lose this one!");
+  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    console.log("Sorry Mate you lose this one!");
   } else {
-    console.log(" You loose mate");
+    console.log("Congrats! You win this round!");
   }
 }
 
