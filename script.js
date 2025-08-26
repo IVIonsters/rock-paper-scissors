@@ -2,6 +2,7 @@
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
+let reset = document.getElementById("reset");
 
 //Global Variables
 let humanScore = 0;
@@ -24,6 +25,11 @@ scissors.addEventListener("click", function () {
   let playerSelection = getHumanChoice("scissors");
   let computerSelection = getComputerChoice();
   playGame(computerScore, humanScore, playerSelection, computerSelection);
+});
+
+// reset game logic
+reset.addEventListener("click", function () {
+  window.location.reload();
 });
 
 // write function to get human choice
