@@ -11,25 +11,24 @@ let computerScore = 0;
 rock.addEventListener("click", function () {
   let playerSelection = getHumanChoice("rock");
   let computerSelection = getComputerChoice();
-  playRound(playerSelection, computerSelection);
+  playGame(computerScore, humanScore, playerSelection, computerSelection);
 });
 
 paper.addEventListener("click", function () {
   let playerSelection = getHumanChoice("paper");
   let computerSelection = getComputerChoice();
-  playRound(playerSelection, computerSelection);
+  playGame(computerScore, humanScore, playerSelection, computerSelection);
 });
 
 scissors.addEventListener("click", function () {
   let playerSelection = getHumanChoice("scissors");
   let computerSelection = getComputerChoice();
-  playRound(playerSelection, computerSelection);
+  playGame(computerScore, humanScore, playerSelection, computerSelection);
 });
 
 // write function to get human choice
 function getHumanChoice(humanChoice) {
   console.log("Human Selects", humanChoice);
-
   return humanChoice;
 }
 
@@ -38,10 +37,8 @@ function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
   //generate array index
   const randomIndex = Math.floor(Math.random() * choices.length);
-
   let computerChoice = choices[randomIndex];
   console.log("Computer Selects", computerChoice);
-
   return computerChoice;
 }
 
@@ -62,9 +59,23 @@ function playRound(playerSelection, computerSelection) {
     console.log("Congrats! You win this round!");
     ++humanScore;
   }
-  console.log(computerScore, humanScore);
+  console.log("Player Score:", humanScore, "Computer Score", computerScore);
 }
 
 // write logic to play 5 rounds = 1 game
+function playGame(
+  computerScore,
+  humanScore,
+  playerSelection,
+  computerSelection
+) {
+  if (computerScore === 5) {
+    console.log("Game OVER! Computer WINS");
+  } else if (humanScore === 5) {
+    console.log("Congrats! You win this time!");
+  } else {
+    playRound(playerSelection, computerSelection);
+  }
+}
 // change display on game win at 5 rounds to win or lose
 // update display on screen scores / images of selected items
