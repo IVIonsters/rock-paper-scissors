@@ -42,7 +42,7 @@ This project implements the timeless game of Rock Paper Scissors where players c
 
 ## Screenshot
 
-![GameBoy-inspired Rock Paper Scissors game](./images/iPhone-16-PRO-MAX-127.0.0.1.png)
+<img src="./images/iPhone-16-PRO-MAX-127.0.0.1.png" alt="GameBoy-inspired Rock Paper Scissors game" width="300" />
 
 ## Credits
 
