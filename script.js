@@ -51,13 +51,20 @@ function playRound(playerSelection, computerSelection) {
     console.log("It's a tie mate, try again!");
   } else if (playerSelection === "rock" && computerSelection === "paper") {
     console.log("Sorry Mate you lose this one!");
+    ++computerScore;
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     console.log("Sorry Mate you lose this one!");
+    ++computerScore;
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     console.log("Sorry Mate you lose this one!");
+    ++computerScore;
   } else {
     console.log("Congrats! You win this round!");
+    ++humanScore;
   }
+  console.log(computerScore, humanScore);
 }
 
 // write logic to play 5 rounds = 1 game
+// change display on game win at 5 rounds to win or lose
+// update display on screen scores / images of selected items
