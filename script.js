@@ -3,6 +3,8 @@ let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
 let reset = document.getElementById("reset");
+let playerDisplay = document.getElementById("player-score");
+let computerDisplay = document.getElementById("computer-score");
 
 //Global Variables
 let humanScore = 0;
@@ -55,15 +57,23 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection === "rock" && computerSelection === "paper") {
     console.log("Sorry Mate you lose this one!");
     ++computerScore;
+    playerDisplay.textContent = humanScore;
+    computerDisplay.textContent = computerScore;
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     console.log("Sorry Mate you lose this one!");
     ++computerScore;
+    playerDisplay.textContent = humanScore;
+    computerDisplay.textContent = computerScore;
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     console.log("Sorry Mate you lose this one!");
     ++computerScore;
+    playerDisplay.textContent = humanScore;
+    computerDisplay.textContent = computerScore;
   } else {
     console.log("Congrats! You win this round!");
     ++humanScore;
+    playerDisplay.textContent = humanScore;
+    computerDisplay.textContent = computerScore;
   }
   console.log("Player Score:", humanScore, "Computer Score", computerScore);
 }
@@ -83,5 +93,3 @@ function playGame(
     playRound(playerSelection, computerSelection);
   }
 }
-// change display on game win at 5 rounds to win or lose
-// update display on screen scores / images of selected items
