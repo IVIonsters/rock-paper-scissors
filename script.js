@@ -5,6 +5,9 @@ let scissors = document.getElementById("scissors");
 let reset = document.getElementById("reset");
 let playerDisplay = document.getElementById("player-score");
 let computerDisplay = document.getElementById("computer-score");
+let winnerDisplay = document.querySelector("h1");
+let sorryDisplay = document.querySelector(".vs");
+let resultDisplay = document.getElementById("result-message");
 
 //Global Variables
 let humanScore = 0;
@@ -86,8 +89,14 @@ function playGame(
   computerSelection
 ) {
   if (computerScore === 5) {
+    winnerDisplay.textContent = "GAME OVER COMPUTER WINS";
+    sorryDisplay.textContent = "SORRY";
+    resultDisplay.textContent = "Reset to try again!";
     console.log("Game OVER! Computer WINS");
   } else if (humanScore === 5) {
+    winnerDisplay.textContent = "GAME OVER PLAYER WINS";
+    sorryDisplay.textContent = "YAY!";
+    resultDisplay.textContent = "Reset to try again!";
     console.log("Congrats! You win this time!");
   } else {
     playRound(playerSelection, computerSelection);
