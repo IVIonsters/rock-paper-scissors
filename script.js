@@ -3,18 +3,35 @@ let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
 
+//Global Variables
+let humanScore = 0;
+let computerScore = 0;
+
 //Event listeners for choice buttons
 rock.addEventListener("click", function () {
-  getHumanChoice("rock");
+  let playerSelection = getHumanChoice("rock");
+  let computerSelection = getComputerChoice();
+  playRound(playerSelection, computerSelection);
 });
 
 paper.addEventListener("click", function () {
-  getHumanChoice("paper");
+  let playerSelection = getHumanChoice("paper");
+  let computerSelection = getComputerChoice();
+  playRound(playerSelection, computerSelection);
 });
 
 scissors.addEventListener("click", function () {
-  getHumanChoice("scissors");
+  let playerSelection = getHumanChoice("scissors");
+  let computerSelection = getComputerChoice();
+  playRound(playerSelection, computerSelection);
 });
+
+// write function to get human choice
+function getHumanChoice(humanChoice) {
+  console.log("Human Selects", humanChoice);
+
+  return humanChoice;
+}
 
 // write function to get computer choice
 function getComputerChoice() {
@@ -22,18 +39,19 @@ function getComputerChoice() {
   //generate array index
   const randomIndex = Math.floor(Math.random() * choices.length);
 
-  let randomComputerChoice = choices[randomIndex];
-  console.log("Computer Selects", randomComputerChoice);
-}
+  let computerChoice = choices[randomIndex];
+  console.log("Computer Selects", computerChoice);
 
-// write function to get human choice
-function getHumanChoice(choice) {
-  console.log("Human Selects", choice);
-  getComputerChoice();
+  return computerChoice;
 }
-
-// create player variable score function
 
 // write logic to play a single round
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === "rock") {
+    console.log("winner winner");
+  } else {
+    console.log(" You loose mate");
+  }
+}
 
 // write logic to play 5 rounds = 1 game
